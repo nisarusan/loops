@@ -136,7 +136,6 @@ for (let i = 0; i < scores.length; i++) {
 }
 
 
-
 // ==========================================
 // Opdracht 2
 // Schrijf een script die e-mailadressen genereert voor al onze medewerkers. Sla dit op in een nieuwe property "email" die je toevoegt aan iedere medewerker.
@@ -155,12 +154,18 @@ const NOVIEmployees = [{firstName: 'Nova', lastName: 'Eeken'}, {
 //   { firstName: 'Mark', lastName: 'Rensen', email: 'Mark.Rensen@novi.nl' },
 //  ];
 // ==========================================
-
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+    console.log(NOVIEmployees[i].email);
+}
 
 // Opdracht 2-BONUS
 // Lukt het je om ervoor te zorgen dat alle e-mailadressen in lowercase letters komen te staan? Dit heb je nog niet geleerd, maar google is your best friend...
 // ==========================================
-
+for (let i = 0; i < NOVIEmployees.length; i++) {
+    NOVIEmployees[i].email = NOVIEmployees[i].firstName + "." + NOVIEmployees[i].lastName + "@novi.nl";
+    console.log(NOVIEmployees[i].email.toLowerCase());
+}
 
 // ==========================================
 // Opdracht 3
@@ -173,6 +178,7 @@ const NOVIEmployees = [{firstName: 'Nova', lastName: 'Eeken'}, {
 //  3572 = Wittevrouwen
 //  3581 = Oudwijk
 //  3583 = Schildersbuurt
+
 
 const students = [{name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborhood: null}, {
     name: 'Mehmet', city: 'Utrecht', zipCode: '3514', neighborhood: null
@@ -187,6 +193,60 @@ const students = [{name: 'Mariska', city: 'Utrecht', zipCode: '3513', neighborho
 }, {name: 'Aicha', city: 'Utrecht', zipCode: '3514', neighborhood: null}, {
     name: 'Karima', city: 'Utrecht', zipCode: '3531', neighborhood: null
 },];
+
+// For loop schrijve
+for (let i = 0; i < students.length; i++) {
+    switch (true) {
+        case students[i].zipCode === '3513':
+            students[i].neighborhood = "Pijlsweerd";
+            break;
+
+        case students[i].zipCode === '3581':
+            students[i].neighborhood = "Oudwijk";
+            break;
+
+        case students[i].zipCode === '3514':
+            students[i].neighborhood = "Vogelenbuurt";
+            break;
+
+        case students[i].zipCode === '3512':
+            students[i].neighborhood = "Binnenstad";
+            break;
+
+        case students[i].zipCode === '3531':
+            students[i].neighborhood = "Lombok";
+            break;
+
+        case students[i].zipCode === '3572':
+            students[i].neighborhood = "Wittevrouwen";
+            break;
+
+        case students[i].zipCode === '3583':
+            students[i].neighborhood = "Schildersbuurt";
+            break;
+    }
+    // console.log(students[i].neighborhood);
+
+}
+
+
+// Effectiever met een for each en mapping. Hoe effectiever.. weet niet
+const zipCodeToNeighborhood = {
+    '3513': 'Pijlsweerd',
+    '3581': 'Oudwijk',
+    '3514': 'Vogelenbuurt',
+    '3512': 'Binnenstad',
+    '3531': 'Lombok',
+    '3572': 'Wittevrouwen',
+    '3583': 'Schildersbuurt',
+};
+students.forEach(student => {
+    student.neighborhood = zipCodeToNeighborhood[student.zipCode] || 'Unknown';
+    console.log((students));
+})
+
+
+
 
 // Verwachte uitkomsten:
 // [
