@@ -13,7 +13,19 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // console.log(names) geeft: ["Henkje", "Pietje", "Fredje", "Joopje"]
 
 
+// Optie 1 proberen;
+// names[0] = "Henkje";
+// names[1] = "Pietje";
+// names[2] = "Fredje";
+// names[3] = "Joopje";
+//
+// console.log(names);
 
+// Kan het effectiever, een for loop proberen
+for (let i = 0; i < names.length; i++) {
+    names[i] = names[i] + "je";
+}
+console.log(names);
 
 
 // ==========================================
@@ -22,16 +34,22 @@ const names = ["Henk", "Piet", "Fred", "Joop"];
 // Zorg ervoor dat dit ook zou werken als de array wel 100 of 200 getallen zou bevatten!
 // ==========================================
 
-const numbers = [2, 4, 5, 29, 38];
 
+// idk..
+// const numbers = [2, 4, 5, 29, 38];
+// for (let i = numbers[0]; i < numbers.length; i % 2) {
+//     console.log(i * 2);
+//     for (let j = numbers[i]; i < numbers.length; j+=3) {
+//         console.log(j * 3);
+//     }
+// }
+//
+// console.log(numbers);
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
 // console.log(numbers) geeft: [2, 4, 5, 29, 38];
 // Na jouw script zie je de aangepaste waardes:
 // console.log(numbers) geeft: [ 4, 8, 15, 87, 76 ];
-
-
-
 
 
 // ==========================================
@@ -43,6 +61,21 @@ const numbers = [2, 4, 5, 29, 38];
 // ==========================================
 
 const squares = [30, 2, 8, 24, 11];
+
+for(let i = 0; i < squares.length; i++) {
+    const removed = [...squares];
+    squares[i] = squares[i] ** 3;
+    console.log("Het volume van " + removed[i] + " is " + squares[i]);
+}
+
+//
+// for (let i = 0; i < squares.length; i++) {
+//     console.log("Het volume van " + squares[i]);
+//     for (let j = 0; j < squares[i]; i++) {
+//         squares[i] = squares[i] ** 3
+//         console.log("Het volume van " + squares[i] + " is " + squares[j]);
+//     }
+// }
 
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:
