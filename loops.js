@@ -6,14 +6,17 @@
 // ***
 // ****
 // *****
-//
+
+
+for (let i = 0; i < 6; i++) {
+    let Char = "*";
+    console.log(Char.repeat(i));
+}
+
 
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen...
 // Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
-
-
-
 
 
 // ==========================================
@@ -25,6 +28,18 @@
 // loop...
 // klaar!
 // ==========================================
+for (let i = 0; i < 5; i++) {
+    if (i < 4) {
+        console.log("loop");
+    } else {
+        console.log("klaar");
+    }
+}
+
+for (let i = 0; i < 4; i++) {
+    console.log("loop");
+}
+console.log("klaar");
 
 
 
@@ -46,10 +61,28 @@
 // >> 9
 // ==========================================
 
+for (let i = 0; i < 9; i++) {
+    if (i < 3) {
+        console.log(i);
+    } else if (i < 6) {
+        console.log(">" + i);
+    } else {
+        console.log(">>" + i);
+    }
+}
 
 
-
-
+// //Trying some stuff
+// for (let i = 0; i < 9; i++) {
+//     console.log(i);
+//     for (let j = 3; j > i; i++) {
+//         console.log(">" + i);
+//         for (let d = j; d > j; d++) {
+//             console.log(d);
+//         }
+//     }
+//     console.log(i)
+// }
 // ==========================================
 // Opdracht 4 (BONUS): schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
 // Echter, voor veelvouden van 3 print je "Fizz" in plaats van het nummer, en voor veelvouden van 5 print je "Buzz".
@@ -88,5 +121,12 @@
 // etc.
 // ==========================================
 
-
+for (let i = 0; i < 100; i++) {
+    for (let j = 3; j < i; j += 3) {
+        // console.log(j);
+        for (let f = 5; f < j; f += 5) {
+            console.log(f);
+        }
+    }
+}
 
