@@ -35,15 +35,18 @@ console.log(names);
 // ==========================================
 
 
-// idk..
-// const numbers = [2, 4, 5, 29, 38];
-// for (let i = numbers[0]; i < numbers.length; i % 2) {
-//     console.log(i * 2);
-//     for (let j = numbers[i]; i < numbers.length; j+=3) {
-//         console.log(j * 3);
-//     }
-// }
 //
+const numbers = [2, 4, 5, 29, 38];
+const result = [];
+for (let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+        result.push(numbers[i] * 2);
+    } else {
+        result.push(numbers[i] * 3);
+    }
+    console.log(result);
+}
+
 // console.log(numbers);
 // Verwachtte uitkomsten:
 // Vóór het script zie je de originele waardes:

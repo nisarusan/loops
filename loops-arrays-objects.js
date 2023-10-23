@@ -135,6 +135,23 @@ for (let i = 0; i < scores.length; i++) {
     console.log(grade);
 }
 
+// Andere manier schrijven effectiever met mapping van te voren;
+const gradeThresholds = [90, 80, 70, 60, 0];
+const grades = ["A", "B", "C", "D", "F"];
+
+for (let i = 0; i < scores.length; i++) {
+    const score = scores[i].score;
+    let grade = "A"; // Default grade is "A"
+
+    for (let j = 0; j < gradeThresholds.length; j++) {
+        if (score < gradeThresholds[j]) {
+            grade = grades[j];
+        }
+    }
+
+    console.log(grade);
+}
+
 
 // ==========================================
 // Opdracht 2
